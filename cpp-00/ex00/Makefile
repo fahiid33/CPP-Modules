@@ -6,11 +6,11 @@
 #    By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 17:30:39 by fstitou           #+#    #+#              #
-#    Updated: 2022/11/10 17:30:41 by fstitou          ###   ########.fr        #
+#    Updated: 2022/11/12 20:42:11 by fstitou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = g++ -Wall -Wextra -Werror -g -o megaphone
+CC = c++ -Wall -Wextra -Werror -std=c++98 -g -o megaphone 
 
 SRC =  megaphone.cpp
 
