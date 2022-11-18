@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 23:06:00 by fstitou           #+#    #+#             */
-/*   Updated: 2022/11/18 03:05:08 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/11/18 04:29:14 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define CONTACT_HPP
 
 #include <iostream>
-
 
 class Contact
 {
@@ -25,9 +24,10 @@ class Contact
 	std::string phone_number;
 	std::string darkest_secret;
     public:
-	int		add();
-	void	get_details();
-	void	table_index(int index);
+	int			add();
+	void		get_details();
+	void		table_index(int index);
+	std::string replace_line(std::string& str);
 };
 
 #endif

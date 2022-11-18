@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:31:00 by fstitou           #+#    #+#             */
-/*   Updated: 2022/11/18 03:38:32 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/11/18 04:34:56 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ int	Phonebook::is_strdigit(std::string& str)
 	int	i;
 
 	i = 0;
+	if (str[0] == '+')
+		i++;
 	while (str[i])
 	{
 		if (!isdigit(str[i]))
@@ -82,11 +84,26 @@ int	Phonebook::is_strdigit(std::string& str)
 	return(1);
 }
 
+std::string	Contact::replace_line(std::string& str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == '\t')
+			str[i] = ' ';
+		i++;
+	}
+	return (str);
+}
+
 void	Contact::table_index(int index)
 {
 	std::string	s;
 	std::cout<< std::setw(10)<< index << "|";
 	s = first_name;
+	s = replace_line(s);
 	if (s.length() > 10)
 	{
 		s.resize(10);
@@ -94,6 +111,7 @@ void	Contact::table_index(int index)
 	}
 	std::cout << std::setw(10) << s << "|";
 	s = last_name;
+	s = replace_line(s);
 	if (s.length() > 10)
 	{
 		s.resize(10);
@@ -101,6 +119,7 @@ void	Contact::table_index(int index)
 	}
 	std::cout << std::setw(10) << s << "|";
 	s = nickname;
+	s = replace_line(s);
 	if (s.length() > 10)
 	{
 		s.resize(10);
@@ -123,7 +142,7 @@ void	Phonebook::display_contacts(int i)
 	std::getline(std::cin, index);
 	if (!std::cin)
 		exit(0);
-	if (index.empty() || !is_strdigit(index))
+	if (index.empty() || !is_strdigit(index) || index.length() > 9)
 		std::cout <<std::setw(40)<< "index must be a positive number"<< std::endl;
 	else
 	{
