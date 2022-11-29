@@ -6,7 +6,15 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 05:35:20 by fstitou           #+#    #+#             */
-/*   Updated: 2022/11/18 05:35:21 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/11/29 23:34:50 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie  Zombie::*newZombie(std::string namee)
+{
+    Zombie z;
+    z.
+    return (z);
+}
