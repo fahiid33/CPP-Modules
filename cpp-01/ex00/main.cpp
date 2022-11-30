@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 22:56:37 by fstitou           #+#    #+#             */
-/*   Updated: 2022/11/29 23:25:45 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/11/30 01:04:48 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ int main()
 {
     Zombie *z;
     z = NULL;
-    z = z->newZombie("haha");
+    z = newZombie("haha");
     z->announce();
-    // z->randomChump("papa");
+    // delete z;
+    randomChump("papa");
     // z->announce();
 }
