@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 05:35:23 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/06 00:06:02 by fstitou          ###   ########.fr       */
+/*   Created: 2022/12/06 00:52:59 by fstitou           #+#    #+#             */
+/*   Updated: 2022/12/06 02:36:48 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-void    randomChump(std::string name)
+#include <iostream>
+
+class Weapon
 {
-    Zombie Z(name);
-    Z.announce();
-}
+    private:
+    std::string type;
+    public:
+    Weapon();
+    ~Weapon();
+    std::string const getType();
+    void    setType(std::string Type);
+};
+
+#endif

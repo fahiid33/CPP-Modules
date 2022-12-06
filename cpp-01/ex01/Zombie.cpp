@@ -1,19 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 05:35:23 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/06 00:06:02 by fstitou          ###   ########.fr       */
+/*   Created: 2022/12/06 00:13:02 by fstitou           #+#    #+#             */
+/*   Updated: 2022/12/06 00:15:16 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void    randomChump(std::string name)
+Zombie::Zombie(void)
 {
-    Zombie Z(name);
-    Z.announce();
+    std::cout<<"constructor called"<< std::endl;
+}
+
+Zombie::~Zombie(void)
+{
+    std::cout<< "destructor name: "<< this->name << " is being destroyed" << std::endl;
+}
+
+void    Zombie::announce(void)
+{
+    std::cout<< this->name <<": BraiiiiiiinnnzzzZ..."<<std::endl;
+}
+
+Zombie::Zombie(std::string prenom)
+{
+    name = prenom;
+}
+void    Zombie::SetName(std::string namee)
+{
+    name = namee;
 }

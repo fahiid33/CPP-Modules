@@ -1,19 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 05:35:23 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/06 00:06:02 by fstitou          ###   ########.fr       */
+/*   Created: 2022/12/06 00:12:12 by fstitou           #+#    #+#             */
+/*   Updated: 2022/12/06 00:12:58 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef Zombie_hpp
+#define Zombie_hpp
 
-void    randomChump(std::string name)
+#include <string>
+#include <iostream>
+#include <new>
+class Zombie
 {
-    Zombie Z(name);
-    Z.announce();
-}
+    private:
+    std::string name;
+    public:
+    Zombie(void);
+    ~Zombie(void);
+    Zombie(std::string prenom);
+    void    announce(void);
+    void    SetName(std::string name);
+};
+
+Zombie* zombieHorde( int N, std::string name );
+
+#endif

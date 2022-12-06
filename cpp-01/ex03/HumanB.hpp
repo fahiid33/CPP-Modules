@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 05:35:23 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/06 00:06:02 by fstitou          ###   ########.fr       */
+/*   Created: 2022/12/06 00:52:49 by fstitou           #+#    #+#             */
+/*   Updated: 2022/12/06 02:38:09 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
 
-void    randomChump(std::string name)
+#include "Weapon.hpp"
+
+class HumanB
 {
-    Zombie Z(name);
-    Z.announce();
-}
+    private:
+    Weapon weapon;
+    std::string w_name;
+    public:
+    HumanB();
+    ~HumanB();
+    void    attack();
+} ;
+
+#endif

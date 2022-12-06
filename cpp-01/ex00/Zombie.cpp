@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 05:35:25 by fstitou           #+#    #+#             */
-/*   Updated: 2022/11/30 00:57:23 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/05 22:54:42 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,12 @@ Zombie::Zombie(void)
 
 Zombie::~Zombie(void)
 {
-    std::cout<< "destructor name: "<<name << "is being destroyed" << std::endl;
+    std::cout<< "destructor name: "<< this->name << " is being destroyed" << std::endl;
 }
 
 void    Zombie::announce(void)
 {
-    Zombie z;
-    std::cout<<name<<": BraiiiiiiinnnzzzZ..."<<std::endl;
+    std::cout<< this->name <<": BraiiiiiiinnnzzzZ..."<<std::endl;
 }
 
 Zombie::Zombie(std::string prenom)

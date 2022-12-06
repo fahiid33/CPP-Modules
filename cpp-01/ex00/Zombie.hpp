@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 05:35:27 by fstitou           #+#    #+#             */
-/*   Updated: 2022/11/30 00:52:15 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/11/30 01:26:22 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 #include <new>
 class Zombie
 {
+    private:
     std::string name;
+
     public:
     Zombie(void);
     ~Zombie(void);
