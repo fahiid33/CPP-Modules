@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 00:52:52 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/07 20:41:08 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/07 23:39:06 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int main()
         club.setType("some other type of club");
         jim.attack();
     }
+    // system("leaks violence");
     return 0;
 }

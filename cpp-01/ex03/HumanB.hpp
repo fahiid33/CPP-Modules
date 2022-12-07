@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 00:52:49 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/07 20:17:28 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/07 23:18:34 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ class HumanB
     ~HumanB();
     void    attack();
     void    setWeapon(Weapon &wp);
-} ;
+};
 
 #endif
