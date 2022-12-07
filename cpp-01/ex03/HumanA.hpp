@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 00:52:44 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/06 02:38:00 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/06 22:50:02 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class HumanA
 {
     private:
-    Weapon w;
+    Weapon weapon;
     std::string w_name;
     public:
     HumanA();
