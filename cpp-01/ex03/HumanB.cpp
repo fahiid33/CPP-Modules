@@ -6,21 +6,26 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 00:52:47 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/06 02:12:17 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/07 20:35:49 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(void)
+HumanB::HumanB(std::string name)
 {
-    std::cout<< "HumanB constructor called"<< std::endl;
+    w_name = name;
 }
-HumanB::~HumanB(void)
+void    HumanB::attack(void)
 {
-    std::cout << "HumanB desructor is being destroyed" << std::endl;
+    std::cout << w_name << " attacks with their " << weap->getType() << std::endl;
+
 }
-HumanB::attack()
+void    HumanB::setWeapon(Weapon &wp)
 {
-    std::cout << "HumanA attacks with their" << weapon.
+    weap = &wp;
+}
+HumanB::~HumanB()
+{
+    
 }

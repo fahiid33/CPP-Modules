@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 00:52:49 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/06 02:38:09 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/07 20:17:28 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 class HumanB
 {
     private:
-    Weapon weapon;
+    Weapon *weap;
     std::string w_name;
     public:
-    HumanB();
+    HumanB(std::string name);
     ~HumanB();
     void    attack();
+    void    setWeapon(Weapon &wp);
 } ;
 
 #endif

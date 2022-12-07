@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 00:52:59 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/06 22:59:38 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/07 20:22:14 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Weapon
     private:
     std::string type;
     public:
-    Weapon(std::string type);
+    Weapon(std::string weapon);
     ~Weapon();
     std::string const getType();
     void    setType(std::string Type);

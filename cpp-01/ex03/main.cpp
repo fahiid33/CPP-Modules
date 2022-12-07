@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 00:52:52 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/06 02:33:47 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/07 20:41:08 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 int main()
 {
+    
     {
         Weapon club = Weapon("crude spiked club");
         HumanA bob("Bob", club);
