@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/17 02:17:33 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/17 03:31:06 by fstitou          ###   ########.fr       */
+/*   Created: 2022/12/17 03:34:51 by fstitou           #+#    #+#             */
+/*   Updated: 2022/12/17 03:39:11 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ class Fixed
 };
 
 std::ostream &  operator<<( std::ostream & out, Fixed const & f );
+
 
 #endif
