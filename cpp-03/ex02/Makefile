@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/17 02:17:24 by fstitou           #+#    #+#              #
-#    Updated: 2022/12/17 23:14:39 by fstitou          ###   ########.fr        #
+#    Created: 2022/12/18 00:14:58 by fstitou           #+#    #+#              #
+#    Updated: 2022/12/18 03:05:06 by fstitou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = c++ -Wall -Wextra -Werror -std=c++98 -g -o Fixed 
+CC = c++ -Wall -Wextra -Werror -std=c++98  -g -o FragTrap 
 
-SRC =  main.cpp Fixed.cpp
+SRC =  main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
-NAME = Fixed
+NAME = FragTrap
 
 all: $(NAME)
 
@@ -28,3 +28,4 @@ fclean: clean
 	rm -f $(NAME) 
 
 re : fclean all
+	@rm -r *.dSYM

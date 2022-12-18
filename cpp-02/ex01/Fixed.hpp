@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 02:17:33 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/17 03:31:06 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/17 23:24:48 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,15 @@ class Fixed
 	Fixed();
 	Fixed(Fixed const & cpy);
 	~Fixed();
-    Fixed(const int num);
-    Fixed(const float num);
-    float toFloat(void) const;
-    int toInt(void) const;
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
 	Fixed& operator= ( Fixed const & rhs);
+	// ex01 constuctors;
+    Fixed(const int num);
+    Fixed(const float num);
+	// ex01 member functions;
+    float toFloat(void) const;
+    int toInt(void) const;
 };
 
 std::ostream &  operator<<( std::ostream & out, Fixed const & f );
