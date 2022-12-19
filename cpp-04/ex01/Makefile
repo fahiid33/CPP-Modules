@@ -6,15 +6,15 @@
 #    By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 03:10:53 by fstitou           #+#    #+#              #
-#    Updated: 2022/12/19 00:44:21 by fstitou          ###   ########.fr        #
+#    Updated: 2022/12/19 01:48:39 by fstitou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = c++ -Wall -Wextra -Werror -std=c++98  -g -o Animal 
+CC = c++ -Wall -Wextra -Werror -std=c++98  -g -o Brain 
 
-SRC =  main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp
+SRC =  main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp Brain.cpp
 
-NAME = Animal
+NAME = Brain
 
 all: $(NAME)
 

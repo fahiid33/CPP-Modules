@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 03:14:46 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/18 23:45:57 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/18 23:56:57 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Animal
     Animal  &   operator=(Animal const & src);
     std::string getType();
     void	setType(std::string);
+    virtual void makeSound() const;
 };
 
 

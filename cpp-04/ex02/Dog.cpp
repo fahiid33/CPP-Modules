@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 03:12:08 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/19 00:46:16 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/19 01:59:11 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Dog::Dog( void )
 {
+	_brain = new Brain();
     _type = "Dog";
     std::cout<< "Dog default constructor called"<< std::endl;
 }
@@ -21,6 +22,7 @@ Dog::Dog( void )
 Dog::Dog(Dog const & src) : Animal(src)
 {
     this->_type = src._type;
+	_brain = new Brain(*src._brain);
     std::cout<< "Dog copy constructor called"<< std::endl;
 }
 
@@ -34,6 +36,7 @@ Dog	& Dog::operator=(Dog const & rhs)
 	std::cout<< "Dog copy assignment called"<< std::endl;
 	if (this != &rhs)
 	{
+		_brain = new Brain(*rhs._brain);
 		this->_type = rhs._type;
 	}
 	return *this;
@@ -46,5 +49,6 @@ std::string        Dog::getType()
 
 void	Dog::makeSound() const
 {
+	delete _brain;
 	std::cout<< "Woof"<< std::endl;
 }
