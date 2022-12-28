@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/18 03:16:17 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/26 08:46:41 by fstitou          ###   ########.fr       */
+/*   Created: 2022/12/26 10:40:21 by fstitou           #+#    #+#             */
+/*   Updated: 2022/12/28 12:00:54 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#include "Bureaucrat.hpp"
 
-# include "Animal.hpp"
-
-class Dog : public Animal
+int main()
 {
-    public:
-        Dog();
-        Dog(Dog const & src);
-        ~Dog();
-
-        Dog & operator=(Dog const & rhs);
-        void makeSound() const;
-        std::string getType();
-};
-
-#endif
+    try
+    {
+        Bureaucrat b("aristocrat", -1);
+        for (int i = 1; i < 200; i++)
+        {
+            b.decrementGrade();
+        }
+        std::cout << b;
+        b.incrementGrade();
+        std::cout << b;
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    return 0;
+}

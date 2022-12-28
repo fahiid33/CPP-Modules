@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/18 03:16:17 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/28 10:59:32 by fstitou          ###   ########.fr       */
+/*   Created: 2022/12/23 09:37:29 by fstitou           #+#    #+#             */
+/*   Updated: 2022/12/23 10:45:06 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef DiamondTrap_HPP
+#define DiamondTrap_HPP
 
-# include "Animal.hpp"
-# include "Brain.hpp"
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
+#include <iostream>
 
-class Dog : public Animal
+class DiamondTrap : public FragTrap, public ScavTrap
 {
     public:
-        Dog();
-        Dog(Dog const & src);
-        virtual ~Dog();
+        DiamondTrap(std::string name);
+        DiamondTrap(DiamondTrap const & src);
+        ~DiamondTrap(void);
+        DiamondTrap & operator=(DiamondTrap const & rhs);
 
-        Dog & operator=(Dog const & rhs);
-        void makeSound() const;
-        std::string getType();
-        std::string get_idea();
+        void	whoAmI(void);
+        void	attack(std::string const & target);
+
     private:
-        Brain *_brain;
+        std::string	_name;
 };
 
 #endif

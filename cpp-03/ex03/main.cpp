@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/18 03:16:17 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/26 08:46:41 by fstitou          ###   ########.fr       */
+/*   Created: 2022/12/18 02:59:03 by fstitou           #+#    #+#             */
+/*   Updated: 2022/12/23 10:51:09 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#include "DiamondTrap.hpp"
 
-# include "Animal.hpp"
-
-class Dog : public Animal
+int main(void)
 {
-    public:
-        Dog();
-        Dog(Dog const & src);
-        ~Dog();
-
-        Dog & operator=(Dog const & rhs);
-        void makeSound() const;
-        std::string getType();
-};
-
-#endif
+    DiamondTrap d;
+	std::cout << std::endl;
+	DiamondTrap a( "XD" );
+	std::cout << std::endl;
+	DiamondTrap b( "Alfonso" );
+	std::cout << std::endl;
+	d = b;
+	std::cout << std::endl;
+	d.attack("Me");
+	std::cout << std::endl;
+	a.whoAmI();
+	std::cout << std::endl;
+    return 0;
+}

@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 03:14:46 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/18 23:56:57 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/27 16:13:52 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Animal
     std::string _type;
     public:
     Animal( void );
-	Animal(std::string animal);
     Animal(Animal const & src);
     ~Animal( void );
     Animal  &   operator=(Animal const & src);

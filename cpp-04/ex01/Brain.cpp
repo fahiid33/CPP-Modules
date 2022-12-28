@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 01:54:47 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/19 02:09:48 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/28 11:08:46 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Brain::Brain()
     int i = 0;
     while (i < 100)
     {
-        this->ideas[i] = "Idea "; //+ std::to_string(i);
+        this->ideas[i] = "Idea " + std::to_string(i);
         i++;
     }
     std::cout << "Brain Default constructor called"<< std::endl;

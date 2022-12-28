@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 03:12:08 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/19 01:59:11 by fstitou          ###   ########.fr       */
+/*   Updated: 2022/12/28 10:59:25 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Dog::Dog(Dog const & src) : Animal(src)
 
 Dog::~Dog()
 {
+	delete _brain;
     std::cout<< "Dog destructor called"<< std::endl;
 }
 
@@ -46,9 +47,12 @@ std::string        Dog::getType()
 {
     return _type;
 }
+std::string Dog::get_idea()
+{
+	return (_brain->ideas[2]);
+}
 
 void	Dog::makeSound() const
 {
-	delete _brain;
 	std::cout<< "Woof"<< std::endl;
 }

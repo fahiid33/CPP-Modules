@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/18 03:10:53 by fstitou           #+#    #+#              #
-#    Updated: 2022/12/27 16:04:01 by fstitou          ###   ########.fr        #
+#    Created: 2022/12/26 10:14:01 by fstitou           #+#    #+#              #
+#    Updated: 2022/12/28 11:10:17 by fstitou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = c++ -Wall -Wextra -Werror -std=c++98  -g -o Animal 
+CC = c++ -Wall -Wextra -Werror -std=c++98  -g -o Bureaucrat 
 
-SRC =  main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp
+SRC =  main.cpp Bureaucrat.cpp
 
-NAME = Animal
+NAME = Bureaucrat
 
 all: $(NAME)
 

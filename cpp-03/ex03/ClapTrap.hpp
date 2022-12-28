@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/18 03:14:46 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/26 05:39:42 by fstitou          ###   ########.fr       */
+/*   Created: 2022/12/18 00:15:20 by fstitou           #+#    #+#             */
+/*   Updated: 2022/12/18 02:49:32 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # include <iostream>
 
-class Animal
+class ClapTrap
 {
     protected:
-    std::string _type;
+        std::string _name;
+        int _hit_points;
+        int _energy_points;
+        int _attack_damage;
     public:
-    Animal( void );
-	Animal(std::string animal);
-    Animal(Animal const & src);
-    virtual ~Animal( void );
-    Animal  &   operator=(Animal const & src);
-    std::string getType();
-    void	setType(std::string);
-    virtual void makeSound() const;
+        ClapTrap(std::string name);
+        ClapTrap(ClapTrap const & src);
+        ~ClapTrap(void);
+        ClapTrap & operator=(ClapTrap const & rhs);
+        void attack(std::string const & target);
+        void takeDamage(unsigned int amount);
+        void beRepaired(unsigned int amount);
+    
 };
-
 
 #endif
