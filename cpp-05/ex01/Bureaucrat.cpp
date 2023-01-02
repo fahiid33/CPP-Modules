@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:24:51 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/28 12:33:59 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/02 18:18:51 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,4 +109,12 @@ const char  *  Bureaucrat::GradeTooHighException::what() const throw()
 const char  *  Bureaucrat::GradeTooLowException::what() const throw()
 {
     return "Grade too low";
+}
+
+void    Bureaucrat::signForm(Form & f)
+{
+    if (f.getGradeToSign() < this->grade)
+        std::cout << this->name << " cannot sign " << f.getName() << " because his grade is too low" << std::endl;
+    else
+        std::cout << this->name << " signs " << f.getName() << std::endl;
 }

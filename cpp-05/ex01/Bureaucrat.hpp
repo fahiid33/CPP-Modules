@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:15:04 by fstitou           #+#    #+#             */
-/*   Updated: 2022/12/28 13:39:02 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/02 18:25:04 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 #include <iostream>
 #include <exception>
+#include "Form.hpp"
 
+class Form;
 
 class Bureaucrat
 {
@@ -40,6 +42,7 @@ class Bureaucrat
     {
         virtual const char* what() const throw();
     };
+    void signForm(Form & f);
 };
 
 std::ostream & operator<<(std::ostream & o, Bureaucrat const & src);
