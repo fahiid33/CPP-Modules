@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 12:51:16 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/02 18:22:05 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/04 16:41:31 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ std::ostream &    operator<<(std::ostream & o, Form const & src)
     o << src.getName() << ", form grade to sign " ;
     o << src.getGradeToSign() << ", form grade to execute ";
     o << src.getGradeToExecute() << std::endl;
-    o << "Form is : " << (src.getIsSigned() ? "Well Signed" : "Not signed")<< std::endl;
+    o << "status : Form is " << (src.getIsSigned() ? "Well Signed" : "Not signed")<< std::endl;
     return o;
 }
 
