@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:06:04 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/04 19:07:03 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/05 22:49:19 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     if (executor.getGrade() > Form::getGradeToExecute())
         throw Form::GradeTooLowException();
     std::ofstream file;
-    file.open("_shrubbery");
+    file.open(_target + "_shrubbery");
     file << " \n";
     file << "                                                         .\n";
     file << "                                              .         ;\n";

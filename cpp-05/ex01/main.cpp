@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:40:21 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/04 16:49:09 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/05 22:41:20 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ int main()
 {
     try
     {
-        Form F("formula", -21,-9);
+        Form F("formula", 25, 9);
         std::cout << F;
-        Bureaucrat B("aristo", 20);
+        Bureaucrat B("aristo", 26);
         // std::cout << B;
+        F.beSigned(B);
         B.signForm(F);
-        // F.beSigned(B);
-        // std::cout << F;          
+        std::cout << F;          
     }
     catch(std::exception& e)
     {
