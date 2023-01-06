@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 12:43:06 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/02 18:25:48 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/04 17:12:09 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Form
     int const grade_to_sign;
     int const grade_to_execute;
     public :
-    // Form();
+    Form();
     Form(std::string name, int grade_to_sign, int grade_to_execute);
     Form(Form const & src);
     ~Form();
@@ -42,10 +42,6 @@ class Form
         virtual const char* what() const throw();
     };
     class GradeTooLowException : public std::exception
-    {
-        virtual const char* what() const throw();
-    };
-    class FormNotSignedException : public std::exception
     {
         virtual const char* what() const throw();
     };

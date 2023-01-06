@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 12:51:16 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/04 16:41:31 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/04 17:13:37 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // Form::Form()
 // {
-//     std::cout << "Form default constructor called" << std::endl;
+//     // std::cout << "Form default constructor called" << std::endl;
 // }
 
 Form::Form(std::string name, int grade_to_sign, int grade_to_execute) : name(name), is_signed(false), grade_to_sign(grade_to_sign), grade_to_execute(grade_to_execute)
