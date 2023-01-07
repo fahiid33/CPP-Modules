@@ -6,16 +6,13 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 16:25:45 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/07 21:01:30 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/07 23:11:53 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 #include <cstdlib>
-
-#define INT_MAX 2147483647
-#define INT_MIN -2147483648
 
 int check_pseudo(std::string str)
 {
@@ -103,15 +100,15 @@ void    _numbers(double d)
         std::cout << "char: '" << (char)(d) << "'" << std::endl;
     else
         std::cout << "char: Non displayable" << std::endl;
-    if ((long)d > INT_MAX ||(long) d < INT_MIN)
+    if ((int)d > std::numeric_limits<int>::max() ||(int)d < std::numeric_limits<int>::min())
         std::cout << "int: impossible" << std::endl;
     else
         std::cout << "int: " << (int)(d) << std::endl;
-    if ((float)d > INT_MAX || (float)d < INT_MIN)
+    if ((float)d > std::numeric_limits<float>::max() || (float)d < std::numeric_limits<float>::min())
         std::cout << "float: impossible" << std::endl;
     else
         std::cout << "float: " << (float)(d) << "f" << std::endl;
-    if ((double)d > INT_MAX || (double)d < INT_MIN)
+    if ((double)d > std::numeric_limits<double>::max() || (double)d < std::numeric_limits<double>::min())
         std::cout << "double: impossible" << std::endl;
     else
         std::cout << "double: " << (double)(d) << std::endl;
@@ -128,7 +125,7 @@ int main(int ac , char **av)
     std::cout.precision(1);
     std::string s = av[1];
     double d = strtof(av[1], NULL);
-    if (check_pseudo(s) == 1 || invalid_input(s) == 1)
+    if (check_pseudo(s) || invalid_input(s))
         return (0);
     if (s.size() == 1 && !isdigit(s[0]))
         _char(s);
