@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:24:51 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/05 22:40:27 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/06 18:26:29 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,8 @@ void    Bureaucrat::signForm(Form & f)
     else
     {
         std::cout << this->name << " couldn't sign " << f.getName();
-        std::cout << " because its grade is higher than expected" << std::endl;
+        std::cout << " because "<< this->name << " grade " << "(" << this->grade << ")" << 
+        " is higher than " << f.getName() << "'s (" << f.getGradeToSign() << ")"
+        " grade "<< std::endl;
     }
 }   
