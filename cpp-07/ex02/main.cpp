@@ -6,11 +6,13 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 02:52:17 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/08 03:35:43 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/08 18:00:38 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.cpp"
+#include <iostream>
+#include <cstdlib>
 
 #define MAX_VAL 750
 
@@ -18,6 +20,7 @@ int main()
 {
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
+
     srand(time(NULL));
     for (int i = 0; i < MAX_VAL; i++)
     {
