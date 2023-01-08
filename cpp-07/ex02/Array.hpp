@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 02:52:20 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/08 03:12:18 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/08 03:35:52 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ class Array
         Array(unsigned int n);
         Array(Array const &src);
         ~Array(void);
-        Array &operator=(Array const &rhs) 
+        Array &operator=(Array const &rhs); 
         unsigned int size(void) const;
-        T &operator[](unsigned int i);
+        T &operator[](int i);
 };
 
 

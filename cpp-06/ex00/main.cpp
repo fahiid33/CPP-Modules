@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 16:25:45 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/07 23:11:53 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/08 00:13:16 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,9 @@ void    _char(std::string str)
         std::cout << "char: '" << str[0] << "'" << std::endl;
     else
         std::cout << "char: Non displayable" << std::endl;
-    std::cout << "int: " << (int)(str[0]) << std::endl;
-    std::cout << "float: " << (float)(str[0]) << "f" << std::endl;
-    std::cout << "double: " << (double)(str[0]) << std::endl;
+    std::cout << "int: " << static_cast<int>(str[0]) << std::endl;
+    std::cout << "float: " << static_cast<float>(str[0]) << "f" << std::endl;
+    std::cout << "double: " << static_cast<double>(str[0]) << std::endl;
 }
 
 int     is_str_digit(std::string str)
@@ -103,15 +103,15 @@ void    _numbers(double d)
     if ((int)d > std::numeric_limits<int>::max() ||(int)d < std::numeric_limits<int>::min())
         std::cout << "int: impossible" << std::endl;
     else
-        std::cout << "int: " << (int)(d) << std::endl;
+        std::cout << "int: " << static_cast<int>(d) << std::endl;
     if ((float)d > std::numeric_limits<float>::max() || (float)d < std::numeric_limits<float>::min())
         std::cout << "float: impossible" << std::endl;
     else
-        std::cout << "float: " << (float)(d) << "f" << std::endl;
+        std::cout << "float: " << static_cast<float>(d) << "f" << std::endl;
     if ((double)d > std::numeric_limits<double>::max() || (double)d < std::numeric_limits<double>::min())
         std::cout << "double: impossible" << std::endl;
     else
-        std::cout << "double: " << (double)(d) << std::endl;
+        std::cout << "double: " << static_cast<double>(d) << std::endl;
 }
 
 int main(int ac , char **av)

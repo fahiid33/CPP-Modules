@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 02:52:26 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/08 03:07:15 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/08 03:36:04 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,17 @@
 template <typename T>
 Array<T>::Array(void) : _array(new T[0]), _size(0)
 {
+    std::cout << "Construction with no parameter called" << std::endl;
 }
 template <typename T>
 Array<T>::Array(unsigned int n) : _array(new T[n]), _size(n)
 {
+    std::cout << "Construction with an unsigned int parameter called" << std::endl;
 }
 template <typename T>
 Array<T>::Array(Array const &src)
 {
+    std::cout << "Copy constructor called" << std::endl;
     *this = src;
 }
 template <typename T>
@@ -33,9 +36,9 @@ Array<T>::~Array(void)
 template <typename T>
 Array<T> &Array<T>::operator=(Array const &rhs)
 {
+    std::cout << "Copy assignment called" << std::endl;
     if (this != &rhs)
     {
-        delete [] _array;
         _size = rhs._size;
         _array = new T[_size];
         for (unsigned int i = 0; i < _size; i++)
@@ -44,10 +47,11 @@ Array<T> &Array<T>::operator=(Array const &rhs)
     return (*this);
 }
 template <typename T>
-T &Array<T>::operator[](unsigned int i)
+T &Array<T>::operator[](int i)
 {
-    if (i >= 0 && i < _size)
+    if (i >= 0 && i < (int)_size)
         return (_array[i]);
+    std::cout << "index =" << i << std::endl;
     throw std::out_of_range("index is out of bounds");
 }
 template <typename T>

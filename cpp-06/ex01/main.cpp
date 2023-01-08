@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 23:36:29 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/07 23:52:08 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/08 00:38:48 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int main()
     std::cout << d.i << std::endl;
     
     p = serialize(&d);
-    
     
     std::cout << "DESERIALIIIZE : " << std::endl;
     Data *za;
