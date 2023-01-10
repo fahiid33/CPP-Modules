@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 17:52:47 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/09 18:23:13 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/09 22:01:00 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ Base::~Base() {}
 
 Base * generate(void)
 {
+    srand(time(NULL));
     int i = rand() % 3;
     if (i == 0)
         return new A;
@@ -39,6 +40,8 @@ void identify(Base* p)
 
 void    identify(Base &p)
 {
+    if (&p == nullptr)
+        exit(1);
     try
     {
         A &a = dynamic_cast<A&>(p);
@@ -71,9 +74,8 @@ void    identify(Base &p)
 
 int main()
 {
-    srand(time(NULL));
-    Base *b = generate();
     // Base *b = new Base;
+    Base *b = generate();
     identify(b);
     identify(*b);
     delete b;
