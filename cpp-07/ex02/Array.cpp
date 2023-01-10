@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 02:52:26 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/08 18:45:02 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/10 02:26:10 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ template <typename T>
 Array<T>::~Array(void)
 {
     delete [] _array;
+    _size = 0;
 }
 
 template <typename T>

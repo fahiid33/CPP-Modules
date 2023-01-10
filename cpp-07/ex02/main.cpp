@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 02:52:17 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/08 18:00:38 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/10 02:45:39 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 int main()
 {
+    Array<int> numb();
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
 

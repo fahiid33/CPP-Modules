@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 02:16:08 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/08 02:26:21 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/10 01:17:43 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 # include  <iostream>
 
 template < typename  T>
-T    max (T a, T b);
+void	swap (T & a, T & b);
 
 template < typename  T>
-T    max (T a, T b);
+T	max (T a, T b);
 
 template < typename  T>
-T    min (T a, T b);
+T	min (T a, T b);
 
 #endif
