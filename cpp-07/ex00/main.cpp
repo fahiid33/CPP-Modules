@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 02:19:46 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/10 18:44:27 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/10 20:02:49 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,11 @@ int main()
 	std::cout << "c = " << c << ", d = " << d << std::endl;
 	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
 	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+	std::cout << "=========================================" << std::endl;
+	std::cout << "          with complex types " << std::endl;
+	std::cout << "=========================================" << std::endl;
 	Awesome i(2), j(4);
 	::swap(i, j);
-	std::cout << "with complex types :" << std::endl;
 	std::cout << "i = " << i << ", j = " << j << std::endl;
 	std::cout << "min( i, j ) = " << ::min( i, j ) << std::endl;
 	std::cout << "max( i, j ) = " << ::max( i, j ) << std::endl;
