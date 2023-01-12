@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 19:29:07 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/12 19:53:20 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/12 22:53:42 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ int main()
     MutantStack<int>::iterator ite = mstack.end();
     ++it;
     --it;
+    std::cout << "mstack.size = "<< mstack.size() << std::endl;
+    std::cout << "it distance = "<< std::distance(mstack.begin(), mstack.end()) << std::endl;
     while (it != ite)
     {
         std::cout << "it = "<< *it << std::endl;
-        ++it;
+        std::advance(it, 1);
     }
-    std::stack<int> s(mstack);
 }

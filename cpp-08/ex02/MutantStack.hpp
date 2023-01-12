@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 19:29:27 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/12 19:50:57 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/12 22:55:12 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <list>
 #include <iostream>
 #include <iterator>
+#include <algorithm>
 
 template <typename T>
 class MutantStack : public std::stack<T>
