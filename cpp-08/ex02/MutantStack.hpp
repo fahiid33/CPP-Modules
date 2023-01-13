@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 19:29:27 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/12 22:55:12 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/13 00:03:02 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class MutantStack : public std::stack<T>
             return *this;
         };
 
-        typedef typename std::deque<T>::iterator iterator;
+        typedef typename  std::deque<T>::iterator iterator;
 
         iterator begin() {
             return this->c.begin();
