@@ -6,7 +6,7 @@
 /*   By: fstitou <fstitou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 19:29:07 by fstitou           #+#    #+#             */
-/*   Updated: 2023/01/13 00:30:08 by fstitou          ###   ########.fr       */
+/*   Updated: 2023/01/14 00:44:43 by fstitou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
     list.push_back(5);
     list.push_back(17);
     std::cout << "mstack.top = "<< mstack.top() << std::endl;
-    std::cout << "list.top = "<< list.front() << std::endl;
+    std::cout << "list.top = "<< list.back() << std::endl;
     mstack.pop();
     list.pop_back();
     std::cout << "mstack.size = "<< mstack.size() << std::endl;
